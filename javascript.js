@@ -9,8 +9,7 @@ if (comChoice == 3){
     return "rock"
 };/*getComputerChoice options*/
 }
-function playRound(playerSelection,compChoice){
-  playerSelection = prompt("Rock, paper, or Scissors!").toLowerCase();
+function playRound(){
 if (playerSelection == "rock" && compChoice == "paper"){
 alert("You lose! Paper covers Rock"),
 computerScore++,
@@ -40,8 +39,9 @@ else{
     alert("Please input valid answer.")
 }
 }
+playerSelection = prompt("Rock, paper, or Scissors!").toLowerCase();
+let compChoice = getComputerChoice();
 
-const compChoice = getComputerChoice();
 
 function game() {
     for(let i=0;i<5;i++){
