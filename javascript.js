@@ -36,8 +36,9 @@ console.log("The score is", playerScore, "-", computerScore);
 alert("You win! Scissors cuts Paper"),
 playerScore++,
 console.log("The score is",playerScore, "-", computerScore); 
-}
-else{
+}else if(playerSelection==compChoice){
+    alert("its a tie")
+}else{
     alert("Please input valid answer.")
 }
 }
@@ -45,12 +46,12 @@ else{
 
 
 function game() {
-    for(let i=0;i<5;i++){
- if( playRound()){
-    return i++;
+    for(let i=0;i<=5;i++){
+ if( playRound() && winCounter>5){
+    return i++
  } 
     }
-}
+}//loops playRound() 5 times
 let playerScore = 0;
 let computerScore = 0;
-
+//scoreboard
