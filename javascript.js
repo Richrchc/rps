@@ -7,9 +7,11 @@ if (comChoice == 3){
     return "paper"
 }else{comChoice == 1
     return "rock"
-};/*getComputerChoice options*/
+};//getComputerChoice options
 }
 function playRound(){
+let playerSelection = prompt("Rock, paper, or Scissors!").toLowerCase();
+let compChoice = getComputerChoice();
 if (playerSelection == "rock" && compChoice == "paper"){
 alert("You lose! Paper covers Rock"),
 computerScore++,
@@ -25,7 +27,7 @@ console.log("The score is",playerScore, "-", computerScore);
 }else if(playerSelection=="paper" && compChoice=="rock"){
 alert("You win! Paper covers Rock"),
 playerScore++,
-console.log("The score is", playerScore - computerScore);
+console.log("The score is", playerScore, "-", computerScore);
 }else if(playerSelection== "scissors" && compChoice=="rock"){
 alert("You lose! Rock smashses Scissors"),
 computerScore++,
@@ -39,8 +41,7 @@ else{
     alert("Please input valid answer.")
 }
 }
-playerSelection = prompt("Rock, paper, or Scissors!").toLowerCase();
-let compChoice = getComputerChoice();
+//game situations 
 
 
 function game() {
@@ -52,3 +53,4 @@ function game() {
 }
 let playerScore = 0;
 let computerScore = 0;
+
