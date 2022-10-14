@@ -52,6 +52,7 @@ function game() {
  } 
     }
 }//loops playRound() 5 times
+
 let playerScore = 0;
 let computerScore = 0;
 //scoreboard
